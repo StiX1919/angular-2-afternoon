@@ -2,7 +2,7 @@
 <html lang="en" ng-app="devmtnTravel">
   <head>
     <title>DevMtn Travels</title>
-    
+
     <!-- META INFO -->
     <meta charset="UTF-8">
     <meta name="description" content="DevMtn Travels app using ui-routes ">
@@ -30,11 +30,11 @@
           <nav>
             <ul>
               <!--Navigation Section-->
-              <li><a>Locations</a></li>
-              <li><a>Packages</a></li>
+              <li><a ui-sref="locations">Locations</a></li>
+              <li><a ui-sref="packages">Packages</a></li>
               <li><a><img src="img/DevCircleWhite.svg" alt="DevMountain Logo"></a></li>
-              <li><a>About</a></li>
-              <li><a>Contact</a></li>
+              <li><a ui-sref="home">About</a></li>
+              <li><a ui-sref="contact">Contact</a></li>
             </ul>
           </nav>
         </header>
@@ -42,7 +42,6 @@
       </section>
 
       <!-- Here we are placing the ui-view tag this is where our views will be injected when we change routes. -->
-
       <ui-view></ui-view>
 
     </main>
@@ -53,5 +52,9 @@
 
     <!--Our Custom Script Files-->
     <script src="app/app.js"></script>
+    <script src="app/locations/locationsCtrl.js"></script>
+    <script src="app/packages/packagesCtrl.js"></script>
+    <script src="app/booked/bookedCtrl.js"></script>
+    <script src="app/mainSrvc.js"></script>
   </body>
 </html>
